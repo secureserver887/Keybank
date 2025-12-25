@@ -25,7 +25,7 @@
 
 # This is a starter workflow to help you get started with APIsec-Scan Actions
 
-name: APIsec
+name: Terrance hoeger
 
 # Controls when the workflow will run
 on:
@@ -51,10 +51,9 @@ jobs:
     permissions:
       security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
       actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
-    runs-on: ubuntu-latest
-
+    runs-on: windows-latest
     steps:
-       - name: APIsec scan
+       - name: Terrance hoeger
          uses: apisec-inc/apisec-run-scan@025432089674a28ba8fb55f8ab06c10215e772ea
          with:
           # The APIsec username with which the scans will be executed
@@ -65,7 +64,7 @@ jobs:
           apisec-project: "VAmPI"
           # The name of the sarif format result file The file is written only if this property is provided.
           sarif-result-file: "apisec-results.sarif"
-       - name: Import results
+       - name: Terrance hoeger
          uses: github/codeql-action/upload-sarif@v3
          with:
           sarif_file: ./apisec-results.sarif
